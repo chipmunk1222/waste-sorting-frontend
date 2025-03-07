@@ -1,0 +1,26 @@
+/* @import './base.css'; */
+@import "//at.alicdn.com/t/c/font_4781691_z6no5c4j7f.css";
+
+@font-face {
+	font-family: "electronic";
+	src: url("@/assets/font/electronic.ttf");
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	letter-spacing: 0.007px;
+}
+
+:root {
+	color: #fff;
+}
+
+html,
+body,
+#app {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
