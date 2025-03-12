@@ -1,0 +1,32 @@
+// constants.ts
+
+export const INITIAL_GARBAGE_DATA = [
+  { id: 1, time: '2023-01-01T00:00:00Z', garbage_type: '可回收垃圾', image_base64: '' },
+  { id: 2, time: '2023-01-02T00:00:00Z', garbage_type: '有害垃圾', image_base64: '' },
+  { id: 3, time: '2023-01-03T00:00:00Z', garbage_type: '厨余垃圾', image_base64: '' },
+  { id: 4, time: '2023-01-04T00:00:00Z', garbage_type: '其他垃圾', image_base64: '' },
+  { id: 5, time: '2023-01-05T00:00:00Z', garbage_type: '可回收垃圾', image_base64: '' },
+  { id: 6, time: '2023-01-06T00:00:00Z', garbage_type: '有害垃圾', image_base64: '' },
+  { id: 7, time: '2023-01-07T00:00:00Z', garbage_type: '可回收垃圾', image_base64: '' },
+  { id: 8, time: '2023-01-08T00:00:00Z', garbage_type: '其他垃圾', image_base64: '' },
+  { id: 9, time: '2023-01-09T00:00:00Z', garbage_type: '可回收垃圾', image_base64: '' },
+  { id: 10, time: '2023-01-10T00:00:00Z', garbage_type: '有害垃圾', image_base64: '' },
+  { id: 11, time: '2023-01-11T00:00:00Z', garbage_type: '厨余垃圾', image_base64: '' },
+  { id: 12, time: '2023-01-12T00:00:00Z', garbage_type: '其他垃圾', image_base64: '' },
+  { id: 13, time: '2023-01-13T00:00:00Z', garbage_type: '可回收垃圾', image_base64: '' },
+  { id: 14, time: '2023-01-14T00:00:00Z', garbage_type: '有害垃圾', image_base64: '' },
+  { id: 15, time: '2023-01-15T00:00:00Z', garbage_type: '其他垃圾', image_base64: '' },
+  { id: 16, time: '2023-01-16T00:00:00Z', garbage_type: '其他垃圾', image_base64: '' },
+  { id: 17, time: '2023-01-17T00:00:00Z', garbage_type: '可回收垃圾', image_base64: '' },
+  { id: 18, time: '2023-01-18T00:00:00Z', garbage_type: '有害垃圾', image_base64: '' },
+  { id: 19, time: '2023-01-19T00:00:00Z', garbage_type: '其他垃圾', image_base64: '' },
+  { id: 20, time: '2023-01-20T00:00:00Z', garbage_type: '其他垃圾', image_base64: '' },
+  { id: 21, time: '2023-01-21T00:00:00Z', garbage_type: '可回收垃圾', image_base64: '' },
+  { id: 22, time: '2023-01-22T00:00:00Z', garbage_type: '有害垃圾', image_base64: '' },
+  { id: 23, time: '2023-01-23T00:00:00Z', garbage_type: '其他垃圾', image_base64: '' },
+  { id: 24, time: '2023-01-24T00:00:00Z', garbage_type: '可回收垃圾', image_base64: '' },
+  { id: 25, time: '2023-01-25T00:00:00Z', garbage_type: '其他垃圾', image_base64: '' },
+  { id: 26, time: '2023-01-26T00:00:00Z', garbage_type: '可回收垃圾', image_base64: '' },
+  { id: 27, time: '2023-01-27T00:00:00Z', garbage_type: '有害垃圾', image_base64: '' },
+  { id: 28, time: '2023-01-28T00:00:00Z', garbage_type: '可回收垃圾', image_base64: '' }
+];

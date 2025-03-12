@@ -23,8 +23,12 @@ import { ref, onMounted, watch } from "vue";
 import { useRouter } from "vue-router";
 import Icon from "@/components/Icon.vue";
 import { getWasteType } from "@/api/test";
-const garbage = ref([]);
-const imageData = ref([]);
+
+import { INITIAL_GARBAGE_DATA } from "@/constants";
+// const garbage = ref([]);
+const garbage = ref(INITIAL_GARBAGE_DATA);
+
+const imageData = ref();
 const galleryRef = ref();
 const items = ref([
 	{ id: 1, type: "可回收垃圾" },
@@ -34,16 +38,29 @@ const items = ref([
 ]);
 const imageFilter = () => {
 	return garbage.value.map((item: any) => {
+		const filterTime = item.time.split("T")[0];
 		return {
 			id: item.id,
-			time: item.time,
+			time: filterTime,
 			caption: item.garbage_type,
-			url: item.image_base64,
+			url: item.image_base64 || "",
 		};
 	});
 };
 onMounted(async () => {
-	garbage.value = await getWasteType();
+	try{
+		const getValueFromInterface = await getWasteType();
+		if(getValueFromInterface){
+			garbage.value = getValueFromInterface
+		}
+		else{
+			
+		}
+	}
+	catch(e){
+		console.log(e)
+	}
+
 });
 watch(
 	garbage,

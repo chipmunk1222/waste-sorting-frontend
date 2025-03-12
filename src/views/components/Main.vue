@@ -144,19 +144,32 @@
 	</div>
 </template>
 <script setup lang="ts">
-import { computed, onBeforeMount, onMounted, ref,watch } from "vue";
+import { computed, onBeforeMount, onMounted, ref, watch } from "vue";
 import Icon from "@/components/Icon.vue";
 import HeadCard from "./HeadCard.vue";
 import ChinaChart from "./ChinaChart.vue";
 import SeamlessScroll from "./SeamlessScroll.vue";
 import { getWasteType, getTest } from "@/api/test";
 import HotType from "./HotType.vue";
+import { INITIAL_GARBAGE_DATA } from "@/constants";
 // import SeamlessScroll from 'vue-seamless-scroll';
 
-const garbage = ref();
+
+const garbage = ref(INITIAL_GARBAGE_DATA);
 
 onMounted(async () => {
-	garbage.value = await getWasteType();
+	// console.log("1:",garbage.value);
+	try {	
+		const getValueFromInterface = await getWasteType();
+		if (getValueFromInterface) {
+			garbage.value = getValueFromInterface;
+		}
+		
+	} catch (error) {
+		console.log(error);	
+	}
+
+	// console.log("2",garbage.value);
 	// const test = await getWasteType();
 	// console.log(garbage.value)
 	typeCalculate();
@@ -243,9 +256,10 @@ const areaCleanup = ref([
 const listData = () => {
 	// console.log(garbage.value);
 	return garbage.value.map((item: any) => {
+		const filterTime = item.time.split("T")[0];
 		return {
 			id: item.id,
-			time: item.time,
+			time: filterTime,
 			type: item.garbage_type,
 			img: "garbage_" + item.id + ".jpg",
 		};
