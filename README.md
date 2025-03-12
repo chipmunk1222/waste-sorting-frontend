@@ -11,7 +11,14 @@
 - 使用flexible.js+rem布局实现分辨率自适应
 
 # 技术栈
-Vue+Echarts+axios+typescript+scss+geo3d+vue3-seamless-scroll+flexible.js
+Vue+Echarts+axios+typescript+Vue-router+scss+geo3d+vue3-seamless-scroll+flexible.js
+
+# 项目预览
+可视化大屏页面：
+![https://res.cloudinary.com/dobligy9s/image/upload/v1741750321/waste-sort-screen_gev891.jpg](https://res.cloudinary.com/dobligy9s/image/upload/v1741750321/waste-sort-screen_gev891.jpg)
+
+Gallery画廊页面：
+![https://res.cloudinary.com/dobligy9s/image/upload/v1741750320/waste-sort-gallery_xanviw.jpg](https://res.cloudinary.com/dobligy9s/image/upload/v1741750320/waste-sort-gallery_xanviw.jpg)
 
 # 相关项目
 [豆瓣top100电影可视化大屏](https://github.com/chipmunk1222/douban-top100-screen)
